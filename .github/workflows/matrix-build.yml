@@ -15,8 +15,8 @@ jobs:
         uses: actions/checkout@v4
 
       # REQUIRED: Step containing the specific identifier 'matrix-d303f11'
-      - name: Run matrix-d303f11 identifier step
-        run: echo "Running matrix-d303f11 for version ${{ matrix.version }}"
+      - name: Run matrix-cf47bfd identifier step
+        run: echo "Running matrix-cf47bfd for version ${{ matrix.version }}"
 
       # Create a non-empty unique file for this variant
       - name: Generate build artifact
@@ -29,5 +29,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: build-d303f11-${{ matrix.version }}
+          name: build-cf47bfd-${{ matrix.version }}
           path: artifact-${{ matrix.version }}.txt
